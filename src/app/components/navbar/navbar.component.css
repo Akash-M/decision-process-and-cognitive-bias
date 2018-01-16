@@ -1,0 +1,47 @@
+.header{
+    text-align:center;
+    color:white;
+}
+
+.custom-header {
+    background: linear-gradient(60deg, #0A3F71 ,#05325C) !important;
+}
+
+.navbar {
+    background: linear-gradient(60deg, #0A3F71 , #05325C) !important;
+}
+
+.above-nav{
+    min-height: 100px;
+    background: linear-gradient(60deg, #0A3F71 , #05325C) !important;
+}
+
+.affix {
+    top: 0px;
+    width:100%;
+}
+
+.navbar {border-radius: 0;}
+
+
+@media only screen
+and (max-device-width : 480px) {
+    .sub-navbar{
+        margin-left:0%;
+    }
+}
+
+@media only screen
+and (min-device-width : 481px)
+and (max-device-width : 767px) {
+    .sub-navbar{
+        margin-left:0%;
+    }
+}
+
+@media only screen
+and (min-device-width : 768px) {
+    .sub-navbar{
+        margin-left: 35%;
+    }
+}

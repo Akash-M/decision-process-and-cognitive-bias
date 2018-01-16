@@ -1,0 +1,106 @@
+$border-radius-base: 3px !default;
+$rgb-black: #000000 !default;
+$mdb-text-color-primary: unquote("rgba(#{$rgb-black}, 0.87)") !default;
+$mdb-card-body-text: $mdb-text-color-primary !default;
+$mdb-card-body-background: #fff !default;
+$white-color: #FFFFFF !default;
+$padding-base: 15px !default;
+$gray-color: #999999 !default;
+$margin-base: 15px !default;
+$font-size-base: 14px !default;
+$brand-info: $cyan !default;
+$mdb-shadow-key-umbra-opacity: 0.2 !default;
+$mdb-shadow-key-penumbra-opacity: 0.14 !default;
+$mdb-shadow-ambient-shadow-opacity: 0.12 !default;
+$brand-danger: $red !default;
+$brand-info: $light-blue !default;
+
+@mixin shadow-big-color($color){
+    box-shadow: 0 12px 20px -10px rgba($color, $mdb-shadow-key-penumbra-opacity * 2),
+    0  4px 20px 0px rgba(0,0,0, $mdb-shadow-ambient-shadow-opacity),
+    0  7px 8px -5px rgba($color, $mdb-shadow-key-umbra-opacity);
+}
+
+.card{
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    margin: 25px 0;
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,0.14);
+    border-radius: $border-radius-base;
+    color: $mdb-card-body-text;
+    background: $mdb-card-body-background;
+
+    .card-height-indicator {
+        margin-top: 100%;
+    }
+
+    .title{
+        margin-top: 0;
+        margin-bottom: 5px;
+    }
+
+    .category:not([class*="text-"]){
+        color: $gray-color;
+    }
+    .card-content{
+        padding: 15px 20px;
+
+        .category{
+            margin-bottom: 0;
+        }
+    }
+
+    .card-header{
+        margin: -20px $margin-base 0;
+        border-radius: $border-radius-base;
+        padding: $padding-base;
+        background-color: $gray-color;
+
+        .title{
+            color: $white-color;
+        }
+        .category{
+            margin-bottom: 0;
+            color: rgba($white-color, .62);
+        }
+    }
+
+    .table{
+        margin-bottom: 0;
+
+        tr:first-child td{
+            border-top: none;
+        }
+    }
+
+    [data-background-color="blue"]{
+        background: linear-gradient(60deg, $cyan-400, $cyan-600);
+        @include shadow-big-color($brand-info);
+    }
+
+    [data-background-color="red"]{
+        background: linear-gradient(60deg, $red-400, $red-600);
+        @include shadow-big-color($brand-danger);
+    }
+
+    [data-background-color="dark-blue"]{
+        background: linear-gradient(60deg, $dark-blue-400, $dark-blue-600);
+    }
+
+    .custom-header {
+        background: linear-gradient(60deg, $dark-blue-400, $dark-blue-600);
+    }
+
+    .navbar {
+        background: linear-gradient(60deg, $dark-blue-400, $dark-blue-600) !important;
+    }
+
+    [data-background-color]{
+        color: $white-color;
+
+        a{
+            color: $white-color;
+        }
+    }
+}

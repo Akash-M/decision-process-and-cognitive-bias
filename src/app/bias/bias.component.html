@@ -1,0 +1,70 @@
+<div class="wrapper">
+  <div class="main-content">
+    <div class="container-fluid">
+      <div class="row" style="margin-top:2%;">
+        <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 col-xs-12">
+          <div class="card info-cards">
+            <div class="card-header" data-background-color="dark-blue">
+              <h4 class="title">Cognitive Bias List</h4>
+            </div>
+            <div class="card-content table-responsive">
+              <tree [tree]="biasClassificationTree" #treeComponent
+                    (nodeSelected)="handleSelected($event)"></tree>
+            </div>
+          </div>
+        </div>
+        <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12 col-xs-12">
+          <div class="card info-cards" id="selectedBlogCard">
+            <div class="card-header" data-background-color="dark-blue">
+              <h4 class="title" id="blog-info-title">Bias Information</h4>
+            </div>
+            <div class="card-content table-responsive">
+              <div *ngIf="selectedBias==null">
+                <i class="material-icons">info</i>
+                <span>No bias selected. Please click on a bias to view it's information.</span>
+              </div>
+              <div *ngIf="selectedBias!=null">
+                <div>
+                  <h4><i>Bias : </i></h4>
+                  <p class="category">{{selectedBias.id}}</p>
+                </div>
+                <div>
+                  <h4><i>Definition : </i></h4>
+                  <p class="category">{{selectedBias.definition}}</p>
+                </div>
+                <div>
+                  <h4><i>OODA Class : </i></h4>
+                  <p class="category">{{selectedBias.oodaclass}}</p>
+                </div>
+                <div>
+                  <h4><i>OODA Subclass : </i></h4>
+                  <p class="category">{{selectedBias.oodasubclass}}</p>
+                </div>
+                <div>
+                  <h4><i>Classification Reasoning : </i></h4>
+                  <p class="category">{{selectedBias.classreasoning}}</p>
+                </div>
+                <div>
+                  <h4><i>Example : </i></h4>
+                  <p class="category">{{selectedBias.example}}</p>
+                </div>
+                <div>
+                  <h4><i>Impact : </i></h4>
+                  <p class="category">{{selectedBias.impact}}</p>
+                </div>
+                <div>
+                  <h4><i>Debiasing Techniques : </i></h4>
+                  <p class="category">{{selectedBias.debias}}</p>
+                </div>
+                <div>
+                  <h4><i>Related Biases : </i></h4>
+                  <p class="category">{{selectedBias.relatedbias}}</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
