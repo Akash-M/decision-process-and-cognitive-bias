@@ -16,6 +16,7 @@ import { DecisionProcessComponent } from './decision-process/decision-process.co
 import { HomeComponent } from './home/home.component';
 import { BiasComponent } from './bias/bias.component';
 import { AboutTheTopicComponent } from './about-the-topic/about-the-topic.component';
+import { FeedbackComponent } from './feedback/feedback.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { AboutTheTopicComponent } from './about-the-topic/about-the-topic.compon
     DecisionProcessComponent,
     HomeComponent,
     BiasComponent,
-    AboutTheTopicComponent
+    AboutTheTopicComponent,
+    FeedbackComponent
   ],
   imports: [
     BrowserModule,

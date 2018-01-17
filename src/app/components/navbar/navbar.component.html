@@ -8,6 +8,11 @@
     <nav class="navbar navbar-inverse" role="navigation">
         <div class="container-fluid sub-navbar">
             <div class="navbar-header">
+                <button class="col-xs-12 col-lg-12 col-md-12 btn btn-default" (click)="navigate('home')"
+                        style="background: transparent;border:none;box-shadow: none;">
+                    Home</button>
+            </div>
+            <div class="navbar-header">
                 <button class="col-xs-12 col-lg-12 col-md-12 btn btn-default" (click)="navigate('decisionprocess')"
                         style="background: transparent;border:none;box-shadow: none;">
                     Learn about decision processes</button>
@@ -16,6 +21,11 @@
                 <button class="col-xs-12 col-lg-12 col-md-12 btn" (click)="navigate('bias')"
                         style="background: transparent;border:none;box-shadow: none;">
                     Learn about biases</button>
+            </div>
+            <div class="navbar-header nav navbar-nav">
+                <button class="col-xs-12 col-lg-12 col-md-12 btn btn-default" (click)="navigate('feedback')"
+                    style="background: transparent;border:none;box-shadow: none;">
+                    Feedback</button>
             </div>
             <!--<div class="navbar-header nav navbar-nav">
                 <button class="col-xs-12 col-lg-12 col-md-12 btn btn-default" (click)="navigate('')"
