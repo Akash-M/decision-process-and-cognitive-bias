@@ -111,9 +111,9 @@ export const BaseRateFallacy: Bias = {
     oodaclass: "Orient Phase",
     oodasubclass: "Information Filtering",
     classreasoning: "The information gathered from the observe phase is subject to processing and interpretation during the orient phase. It is common to filter out and focus on specific information during the orient phase due to various reasons such as too much information, time pressure, cognitive limitations and other reasons. ",
-    example: "",
-    impact: "",
-    debias: "Place equal importance initially to all information available. Filter out information of less importance and document the reasons for focusing on specific information for future reference. ",
+    example: "Microservice vs Monolith architecture: The tradeoffs must be carefully considered when deciding between a microservice and a monolith architecture. For example, from the view point of reliability, microservices have an advantage over monolith since the failure of one microservice will not bring down the entire setup. ",
+    impact: "In the above example, if the decision is to be taken purely based on the reliability factor alone, then microservices is the way forward. However, when setting up a software architecture, there are multiple factors aside from just reliability such as availability, complexity, management, deployment and others. Decisions taken by purely focusing on just a few aspects might have an adverse effect in the future. ",
+    debias: "Ensure that all the parameters are listed down initially. Rank the parameters based on the requirements which then sets up a sounds rationality for the decide phase. ",
     relatedbias: ["Anchoring and Adjustment", "Focusing Effect"]
 };
 
@@ -124,8 +124,8 @@ export const AvailabilityHeuristic: Bias = {
     oodaclass: "Orient Phase",
     oodasubclass: "Previous knowledge/experience",
     classreasoning: "In naturalistic decision making, architects rely on mental shortcuts which when evaluating the information gathered from the observe phase. The mental shortcuts result from their years of experience. ",
-    example: "",
-    impact: "",
+    example: "NodeJS frameworks – Hapi vs Express: Hapi and Express are both Node.js web application frameworks providing a robust set of features for building applications and services. Both are quite similar with minute differences. ",
+    impact: "According to some, Hapi is more effective as compared to Express when dealing with large teams to enforce conventions to keep the code maintainable. If the person in charge of decision-making in a large team has more experience working with Express, then information about Express is more available in memory. This would lead to selection of Express over Hapi even if it is better suited for the given scenario. ",
     debias: "Counting on previous experiences and mental shortcuts to design solutions is part of naturalistic decision making. As with any bias related to experience, it is important to make sure that the interpretation from a previous scenario is applicable to the current scenario and to justify it so as to move to bounded rationality.",
     relatedbias: [""]
 };
@@ -137,8 +137,8 @@ export const SimilarityBiasOrient: Bias = {
     oodaclass: "Orient Phase",
     oodasubclass: "Semblance",
     classreasoning: "Similarity bias is relevant in the context of orient phase when information at hand feels similar to information obtained from a previous use case. As an architect, the tendency is to automatically interpret the information in the same manner due to the similarity to make design decisions.  ",
-    example: "",
-    impact: "",
+    example: "Version control system: There are plenty of version control systems such as Github, GitLab, BitBucket etc. Each option has slight variations when compared with one another. Consider the base where the choice is between GitLab and BitBucket. With BitBucket making a lot of improvements recently such as the addition of pipelines and so on, both options feel similar in many aspects.",
+    impact: "Take into consideration a common use case such as setting up continuous integration to run multiple independent steps in parallel. If the decision is to use BitBucket due to it being similar to GitLab, then this use case would be difficult to implement as the Pipelines feature of BitBucket does not support this feature yet where GitLab already has the feature implemented.",
     debias: "Seek more information to distinguish the current requirements with similar ones to avoid applying the same solution simply due to similarity. ",
     relatedbias: ["Distinction(The tendency to view two options as more dissimilar when evaluating them simultaneously than when evaluating them separately)"]
 };
@@ -403,17 +403,30 @@ export const Inconsistency: Bias = {
     relatedbias: ["Hyperbolic Discounting"]
 };
 
-export const SampleBias: Bias = {
-    id: "",
+export const NegativityBias: Bias = {
+    id: "Negativity",
     parentId: "Decide Phase",
-    definition: "",
+    definition: "Definition 1: Psychological phenomenon by which humans have a greater recall of unpleasant memories compared with positive memories.Definition 2: The negativity bias refers to the often-asymmetrical way we perceive the negative and the positive.",
     oodaclass: "Decide Phase",
     oodasubclass: "Nature of invention / trends",
-    classreasoning: "",
+    classreasoning: "Negativity bias arises knowledge gained from previous experience through the usage of technologies. In high-risk situations, it leads us to make intelligent decisions.",
+    example: "Adoption of Test Driven Development: There is no exact definition of how to use test driven development. It varies from team to team and from developer to developer. Since the concept is relatively new, it is quite difficult for people with a lot of experience to adopt as they are not used to this method of development. ",
+    impact: "Based on the above experience, if an experienced person trying test driven development does not develop a liking for it, the most likely they would not prefer to use it again due to the negative experience initially. Apart from this example, the negativity bias leads to decision-makers becoming more risk averse. If an option feels risky, then the decision will be made to avoid it irrespective of whether it could yield a good return with a relatively low factor.",
+    debias: "List down the facts and try to focus on the positive aspects. Gain a positive perspective by engaging in positive discussion with people who have had a good experience in using the technology. ",
+    relatedbias: ["Optimism Bias (The tendency to be over-optimistic, overestimating favorable and pleasing outcomes)."]
+};
+
+export const MisinformationBias: Bias = {
+    id: "Misinformation effect",
+    parentId: "Act Phase",
+    definition: "Memory becoming less accurate because of interference from post-event information.",
+    oodaclass: "Decide Phase",
+    oodasubclass: "Nature of invention / trends",
+    classreasoning: "The misinformation effect comes into play after a decision has been made and acted upon. The new information generated from act phase overwrites the information gathered during the observe phase.",
     example: "",
-    impact: "",
-    debias: "",
-    relatedbias: [""]
+    impact: "The new information generated creates a bias towards the decision clouding the information gathered previously. This new information systematically removes the rationality in the act phase which could lead to highly biased future decisions.",
+    debias: "Documenting critical information and keeping in touch with it regularly would help in keeping memories more accurate. Moreover, verify if the information and assumptions made in the ‘pre-event’ phase corresponds with the ‘post-event’ information. Update the document in case of any mismatch for future reference.",
+    relatedbias: ["Post-purchase rationalization"]
 };
 
 export const PostPurchaseRationalization: Bias = {
@@ -435,5 +448,5 @@ export const AllBiasesInfo: Bias[] = [CompletenessBias, ConfirmationBias, Inform
     LawOfTheInstrumentOrient, LevelsOfProcessingEffectOrient, MereExposureEffectOrient,
     BandwagonEffectOrient, AttenuationBias, HardEasyEffect, PlanningFallacy, Habit,
     TimeSavingBias, ParkinsonsLawOfTriviality, WellTravelledRoadEffect, BandwagonEffectDecide,
-    IKEAEffect, SampleBias, LawOfTheInstrumentDecide, MereExposureEffectDecide,
-    TestBias, HyperbolicDiscounting, Inconsistency, PostPurchaseRationalization];
+    IKEAEffect, LawOfTheInstrumentDecide, MereExposureEffectDecide, NegativityBias,
+    TestBias, HyperbolicDiscounting, Inconsistency, PostPurchaseRationalization, MisinformationBias];

@@ -81,8 +81,7 @@ export const BiasClassificationTree : TreeModel = {
                     value: 'Nature of invention / Trends',
                     children: [
                         {value: 'Bandwagon Effect'},
-                        {value: 'IKEA effect'},
-                        {value: 'Pro-innovation'}
+                        {value: 'IKEA effect'}
                     ]
                 },
                 {
