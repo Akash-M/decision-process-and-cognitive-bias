@@ -10,11 +10,7 @@ declare const $: any;
 })
 export class AppComponent implements OnInit {
 
-  constructor(private router:Router) {}
-
-  ngOnInit() {
-      $.material.options.autofill = true;
-      $.material.init();
+  constructor(private router:Router) {
       this.router.routeReuseStrategy.shouldReuseRoute = function(){
           return false;
       };
@@ -27,6 +23,11 @@ export class AppComponent implements OnInit {
               window.scrollTo(0, 0);
           }
       });
+  }
+
+  ngOnInit() {
+      $.material.options.autofill = true;
+      $.material.init();
   }
 
 }
