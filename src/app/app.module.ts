@@ -7,6 +7,7 @@ import { AppRoutingModule } from './app.routing';
 import { TreeModule } from 'ng2-tree';
 import { ComponentsModule } from './components/components.module';
 import { AppComponent } from './app.component';
+import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 
 import {
   FormsModule,
@@ -38,7 +39,7 @@ import { FeedbackComponent } from './feedback/feedback.component';
     ReactiveFormsModule,
     TreeModule
   ],
-  providers: [],
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
