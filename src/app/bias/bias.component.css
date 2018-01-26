@@ -16,3 +16,9 @@
         min-height: 200px ;
     }
 }
+p{
+    color:black !important;
+}
+.sub-header{
+    text-decoration: underline !important;
+}
