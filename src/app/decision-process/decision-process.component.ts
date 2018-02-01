@@ -10,11 +10,14 @@ import { AllProcessModelsInfo } from './decision-process-info';
 })
 export class DecisionProcessComponent implements OnInit {
 
-  imgSrc:string = "../../assets/img/decision-process.PNG";
+  imgSrc:string = "../../assets/img/decision_making_process.PNG";
   location: Location;
   selectedInfo;
 
-  constructor(location: Location) { this.location = location; }
+  constructor(location: Location) {
+    this.location = location;
+    this.selectedInfo = AllProcessModelsInfo.decision_making_process;
+  }
 
   ngOnInit() {}
 
