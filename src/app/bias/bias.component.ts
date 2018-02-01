@@ -25,14 +25,10 @@ export class BiasComponent implements OnInit {
   ngOnInit() { }
 
   ngAfterViewInit(): void {
-    /*const oopNodeController2 = this.treeComponent.getControllerByNodeId(2);
-    const oopNodeController3 = this.treeComponent.getControllerByNodeId(3);
-    const oopNodeController4 = this.treeComponent.getControllerByNodeId(4);
-    const oopNodeController5 = this.treeComponent.getControllerByNodeId(5);
-    oopNodeController2.collapse();
-    oopNodeController3.collapse();
-    oopNodeController4.collapse();
-    oopNodeController5.collapse();*/
+    let arr = [3,4,6,7,8,9,11,12,13,14,15];
+    for(let i=0;i<arr.length;i++) {
+      this.treeComponent.getControllerByNodeId(arr[i]).collapse();
+    }
   }
 
   handleSelected(selectedNodeEvent){

@@ -10,6 +10,7 @@ export const BiasClassificationTree : TreeModel = {
             children: [
                 {
                     value: 'Information Gathering',
+                    id:3,
                     children: [
                         {value: 'Completeness'},
                         {value: 'Confirmation'},
@@ -21,6 +22,7 @@ export const BiasClassificationTree : TreeModel = {
                 },
                 {
                     value: 'Information Presentation',
+                    id:4,
                     children: [
                         {value: 'Framing'},
                         {value: 'Similarity'}
@@ -30,22 +32,25 @@ export const BiasClassificationTree : TreeModel = {
         },
         {
             value: 'Orient Phase',
-            id:3,
+            id:5,
             children: [
                 {
                     value: 'Information Filtering',
+                    id:6,
                     children: [
                         {value: 'Base rate fallacy'}
                     ]
                 },
                 {
                     value: 'Semblance',
+                    id:7,
                     children: [
                         {value: 'Similarity'}
                     ]
                 },
                 {
                     value: 'Previous Knowledge / Experience',
+                    id:8,
                     children: [
                         {value: 'Availability Heuristic'},
                         {value: 'Functional Fixedness'},
@@ -56,6 +61,7 @@ export const BiasClassificationTree : TreeModel = {
                 },
                 {
                     value: 'Trends',
+                    id:9,
                     children: [
                         {value: 'Bandwagon Effect'}
                     ]
@@ -64,10 +70,11 @@ export const BiasClassificationTree : TreeModel = {
         },
         {
             value: 'Decide Phase',
-            id:4,
+            id:10,
             children: [
                 {
                     value: 'Complexity',
+                    id:11,
                     children: [
                         {value: 'Attenuation'},
                         {value: 'Hard-easy effect'},
@@ -79,6 +86,7 @@ export const BiasClassificationTree : TreeModel = {
                 },
                 {
                     value: 'Nature of invention / Trends',
+                    id:12,
                     children: [
                         {value: 'Bandwagon Effect'},
                         {value: 'IKEA effect'}
@@ -86,6 +94,7 @@ export const BiasClassificationTree : TreeModel = {
                 },
                 {
                     value: 'Previous knowledge / Experience',
+                    id:13,
                     children: [
                         {value: 'Habit'},
                         {value: 'Law of the instrument'},
@@ -95,6 +104,7 @@ export const BiasClassificationTree : TreeModel = {
                 },
                 {
                     value: 'Strategy',
+                    id:14,
                     children: [
                         {value: 'Test'},
                         {value: 'Hyperbolic Discounting'},
@@ -105,7 +115,7 @@ export const BiasClassificationTree : TreeModel = {
         },
         {
             value: 'Act Phase',
-            id:5,
+            id:15,
             children: [
                 {value: 'Misinformation effect'},
                 {value: 'Post-purchase rationalization'}

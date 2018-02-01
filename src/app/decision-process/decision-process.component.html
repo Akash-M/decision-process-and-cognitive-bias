@@ -4,27 +4,27 @@
       <div class="row menu-items">
         <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12 col-xs-12">
           <button class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12  btn btn-default"
-                  (click)="displayImage('../../assets/img/decision-process.PNG')">
+                  (click)="displayImage('../../assets/img/decision_making_process.PNG')">
             Decision-making Models</button>
         </div>
         <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12 col-xs-12">
           <button class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12  btn btn-default"
-                  (click)="displayImage('../../assets/img/ooda-loop.PNG')">
+                  (click)="displayImage('../../assets/img/ooda_loop_info.PNG')">
             OODA Loop</button>
         </div>
         <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12 col-xs-12">
           <button class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12  btn btn-default"
-                  (click)="displayImage('../../assets/img/rational-economic-model.PNG')">
+                  (click)="displayImage('../../assets/img/rational_economic_model.PNG')">
             Rational Economic Model</button>
         </div>
         <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12 col-xs-12">
           <button class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12  btn btn-default"
-                  (click)="displayImage('../../assets/img/recognition-primed-model.PNG')">
+                  (click)="displayImage('../../assets/img/recognition_primed_model.PNG')">
             Recognition Primed Model</button>
         </div>
         <div class="col-xl-2 col-lg-2 col-md-12 col-sm-12 col-xs-12">
           <button class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12  btn btn-default"
-                  (click)="displayImage('../../assets/img/bounded-rational-model.PNG')">
+                  (click)="displayImage('../../assets/img/bounded_rational_model.PNG')">
             Bounded Rational Model</button>
         </div>
       </div>
@@ -33,6 +33,17 @@
           <img [src]="imgSrc" style="width:95%;"/>
         </div>
       </div>
+      <br/>
+      <div class="row" style="margin-top:2%;">
+        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12" style="justify-content: center;">
+          <div class="card info-cards">
+          <div class="card-header" data-background-color="dark-blue">
+            <h4 class="title">Further Information</h4>
+          </div>
+          <div class="card-content table-responsive" style="justify-content: center">
+            <h4>{{selectedInfo}}</h4>
+          </div>
+        </div>
     </div>
   </div>
 </div>
